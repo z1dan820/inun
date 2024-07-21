@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukmu Sayang</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #ff3366;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .heart {
+            color: #ff3366;
+            font-size: 5em;
+            margin-top: 20px;
+        }
+        .photo {
+            margin-top: 20px;
+        }
+        #content {
+            display: none;
+        }
+        #inputForm {
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        function checkName() {
+            const name = document.getElementById('nameInput').value;
+            if (name.toLowerCase() === "inun lubis", "lubis", "Lubis", "inun") {
+                document.getElementById('inputForm').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                const audio = new Audio('backsound.mp3'); // Ganti dengan URL atau path backsound kamu
+                audio.play();
+            } else {
+                alert("Sayang, hanya Inun yang bisa masuk :)");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Halo...</h1>
+    <div id="inputForm">
+        <p>Siapa namamu atau marga mu?</p>
+        <input type="text" id="nameInput" placeholder="Masukkan namamu">
+        <button onclick="checkName()">Submit</button>
+    </div>
+    <div id="content">
+        <p>Setiap detik bersamamu adalah momen yang paling berharga.</p>
+        <p>Selalu mencintaimu, <br> Fauzan Abdillah Harahap</p>
+        <div class="photo">
+            <img src="foto.jpg" alt="Foto romantis" width="300px"> <!-- Ganti dengan URL atau path foto kamu -->
+        </div>
+        <div class="heart">❤️</div>
+    </div>
+</body>
+</html>
